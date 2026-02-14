@@ -1,2 +1,3 @@
 *.csv
 /anaconda_projects
+/task1/.ipynb_checkpoints
