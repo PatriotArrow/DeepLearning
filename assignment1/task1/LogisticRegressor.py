@@ -91,3 +91,17 @@ class LogisticRegressor:
         Y_pred = (y_prob >= 0.5).astype(int)
         return Y_pred
     
+    def score(self, x_test, y_test):
+        if (self.trained == False):
+            raise ValueError("Not trained uyet!")        
+        
+        y_pred = self.predict(x_test)
+        correct = 0
+        size = len(y_test)
+
+        for i in range(size):
+            if (y_pred[i]==y_test[i]):
+                correct+=1
+
+        return correct/size
+    
