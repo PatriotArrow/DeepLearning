@@ -20,8 +20,9 @@ class LogisticRegressor:
     
     def fit(self, X, Y):
 
-        #X = X.iloc[:, :-1].values
-        #Y = Y.iloc[:, -1].values.reshape(-1, 1)
+        X = np.array(X)
+        Y = np.array(Y).reshape(-1, 1)
+
         m = X.shape[0]
         n = X.shape[1]
 
